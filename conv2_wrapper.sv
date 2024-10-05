@@ -8,7 +8,7 @@ module conv1_wrapper(input_img,kernal1,out_layer1);
 
     logic [15:0] conv_out [0:26][0:26][0:255];
 
-    conv1 conv [95:0](.input_matrix(input_img), .kernel(kernal1), .output_matrix(conv_out));
+    conv1 conv [255:0](.input_matrix(input_img), .kernel(kernal1), .output_matrix(conv_out));
 
 
     // Instantiate the ReLU module for each channel
