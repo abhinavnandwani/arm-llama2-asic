@@ -1,6 +1,6 @@
 module conv1(
-    input logic [15:0] input_matrix [0:226][0:226][0:2], // 227x227 input matrix with 3 channels (RGB)
-    input logic [15:0] kernel [0:10][0:10][0:2],          // 11x11 kernel with 3 channels
+    input wire [15:0] input_matrix [0:226][0:226][0:2], // 227x227 input matrix with 3 channels (RGB)
+    input wire [15:0] kernel [0:10][0:10][0:2],          // 11x11 kernel with 3 channels
     output logic [15:0] output_matrix [0:54][0:54]       // 55x55 output matrix
 );
 
