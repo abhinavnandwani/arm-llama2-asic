@@ -19,6 +19,9 @@ module pe(clk,rst_n, west_row_in, north_col_in, east_row_out, south_col_out);
     input [31:0] sum_in;
     output [31:0] sum_diagonal_out;
 
+
+    // TODO add sum saturation 
+
     always_ff@(posedge clk, negedge rst_n) begin
         if(!rst_n)
             south_col_out <= 0;
