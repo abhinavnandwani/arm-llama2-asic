@@ -4,7 +4,7 @@
     Description     : This is a unit PE element for INT8, it is like a MAC unit but extended for systolic arrays. The sum out is 32 bits.  
 */
 
-module pe(clk,rst_n, west_row_in, north_col_in, east_row_out, south_col_out);
+module pe(clk,rst_n, west_row_in, north_col_in, east_row_out, south_col_out,sum_in,sum_out);
 
     // INT8 
 
@@ -17,7 +17,7 @@ module pe(clk,rst_n, west_row_in, north_col_in, east_row_out, south_col_out);
 
     //// cummulative sum moves diagonally ////
     input [31:0] sum_in;
-    output [31:0] sum_diagonal_out;
+    output reg [31:0] sum_diagonal_out;
 
 
     // TODO add sum saturation 
