@@ -12,7 +12,7 @@ module systolic_mult(clk,rst_n,A_west,B_north,sum_out);
     input [15:0] A_west [0:31]; // matrix A, input from image memory, 32 rows 1 element from each at a time
     input [15:0] B_north [0:31]; //weights, kernals from weight buffer/memory 
 
-    output [15:0] sum_out[0:31][0:31];
+    output [31:0] sum_out[0:31][0:31];
 
     logic [15:0] east_row_out[0:31][0:31];
     logic [15:0] south_col_out [0:31][0:31];
@@ -23,7 +23,7 @@ module systolic_mult(clk,rst_n,A_west,B_north,sum_out);
     assign sum_out = sum;
     
     // 32x32 reg file for sum 
-    always@(posedge clk, negedge rst_n)
+    always_ff@(posedge clk, negedge rst_n)
         if(!rst_n)
             for(i=0;i<32;i++)
                 for(j=0;j<32;j++)
