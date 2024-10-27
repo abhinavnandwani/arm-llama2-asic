@@ -1,4 +1,3 @@
-# Systolic Array Neural Network Accelerator
 
 ### Hi, I'm Abhinav
 
