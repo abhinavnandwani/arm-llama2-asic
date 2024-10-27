@@ -1,8 +1,10 @@
-
+# Systolic Array Neural Network Accelerator
 
 ### Hi, I'm Abhinav
 
-I am a **computer engineering student** at **UW-Madison**. Currently, I am working on this project **Fall 2024**. This is a low energy, highly efficent neural network accelerator using systolic arrays. 
+I am a **computer engineering student** at **UW-Madison**. Currently, I am working on this project during **Fall 2024**. This project focuses on developing a low-energy, highly efficient neural network accelerator using systolic arrays at the RTL level.
+
+All synthesizable code is written in **SystemVerilog**.
 
 
 
