@@ -13,6 +13,7 @@ module systolic_mult(clk,rst_n,A_west,B_north,sum_out);
     input [15:0] B_north [0:31]; //weights, kernals from weight buffer/memory 
 
     output [31:0] sum_out[0:31][0:31];
+    output complete_flag [0:31][0:31];
 
     logic [15:0] east_row_out[0:31][0:31];
     logic [15:0] south_col_out [0:31][0:31];
@@ -48,6 +49,7 @@ module systolic_mult(clk,rst_n,A_west,B_north,sum_out);
                     .south_col_out(south_col_out[i][j]),
                     .sum_in(sum[i][j]),
                     .sum_out(next_sum[i][j])
+                    .complete_flag(complete_flag[i][j])
                 );
             end
         end
