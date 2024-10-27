@@ -1,6 +1,11 @@
 
 
-Hi, I'm Abhinav, a computer engineering student at UW-Madison. I'm currently working on this project over Fall 2024 to accelerate deep learning computations.
+### Hi, I'm Abhinav!
+
+I am a **computer engineering student** at **UW-Madison**. Currently, I am working on this project during **Fall 2024** to accelerate deep learning computations using innovative hardware design techniques.
+
+
+
 ## Architecture
 ![Architecture](architecture.png)
 
