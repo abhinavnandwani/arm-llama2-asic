@@ -1,11 +1,8 @@
 
 
 Hi, I'm Abhinav, a computer engineering student at UW-Madison. I'm currently working on this project over Fall 2024 to accelerate deep learning computations.
-
+##Architecture
 ![Architecture](architecture.png)
-
-## Overview
-The **AlexNet AI Accelerator** is a hardware design aimed at accelerating deep learning computations, specifically for the AlexNet model. It utilizes a systolic array architecture to perform efficient matrix multiplications.
 
 ## Components
 - **Systolic Array**: A 32x32 matrix multiplication unit for INT8 operations, capable of executing 1024 MAC operations per cycle.
