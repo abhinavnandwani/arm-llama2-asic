@@ -2,7 +2,7 @@
 
 ### Hi, I'm Abhinav
 
-I am a **computer engineering student** at **UW-Madison**. Currently, I am working on this project during **Fall 2024** to accelerate deep learning computations using innovative hardware design techniques.
+I am a **computer engineering student** at **UW-Madison**. Currently, I am working on this project **Fall 2024**. This is a low energy, highly efficent neural network accelerator.
 
 
 
