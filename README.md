@@ -1,5 +1,7 @@
 # AlexNet AI Accelerator
 
+Hi, I'm Abhinav, a computer engineering student at UW-Madison. I'm currently working on this project over Fall 2024 to accelerate deep learning computations.
+
 ![Architecture](architecture.png)
 
 ## Overview
