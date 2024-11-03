@@ -1,4 +1,4 @@
-(this is a work in progress, I'm a overworked college student :(( )
+this is a work in progress, I'm a overworked college student :(( 
 
 All synthesizable code is written in **SystemVerilog**.
 
