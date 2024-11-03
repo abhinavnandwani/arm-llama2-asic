@@ -7,9 +7,6 @@ All synthesizable code is written in **SystemVerilog**.
 ## Architecture
 ![Architecture](architecture.png)
 
-# ARM Cortex-M3 LLaMA 2 on Systolic Array Accelerator
-
-This repository contains the code and hardware description files to implement a scaled-down 50 million-parameter variant of the LLaMA 2 model on an ARM Cortex-M3 soft core. Using a custom systolic array for efficient matrix multiplication, the project allows for LLaMA 2 inference on resource-constrained hardware such as FPGA, with Vivado as the deployment tool.
 
 ## Repository Structure
 
