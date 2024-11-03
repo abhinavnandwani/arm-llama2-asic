@@ -1,0 +1,3 @@
+fifo_inject.sv,systemverilog,xil_defaultlib,G:/My Drive/College/alexnet-ai-accelerator/hardware/systolic_array_rtl/fifo_inject.sv,incdir="../../../vivado_systolic.gen/sources_1/ip/CORTEXM3_AXI_0/rtl"
+systolic_control.sv,systemverilog,xil_defaultlib,G:/My Drive/College/alexnet-ai-accelerator/hardware/systolic_array_rtl/systolic_control.sv,incdir="../../../vivado_systolic.gen/sources_1/ip/CORTEXM3_AXI_0/rtl"
+glbl.v,Verilog,xil_defaultlib,glbl.v

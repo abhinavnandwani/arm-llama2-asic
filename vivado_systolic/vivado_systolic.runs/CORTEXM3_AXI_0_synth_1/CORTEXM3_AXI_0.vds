@@ -1,0 +1,41 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Sat Nov  2 22:12:09 2024
+# Process ID: 21436
+# Current directory: G:/My Drive/College/alexnet-ai-accelerator/vivado_systolic/vivado_systolic.runs/CORTEXM3_AXI_0_synth_1
+# Command line: vivado.exe -log CORTEXM3_AXI_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CORTEXM3_AXI_0.tcl
+# Log file: G:/My Drive/College/alexnet-ai-accelerator/vivado_systolic/vivado_systolic.runs/CORTEXM3_AXI_0_synth_1/CORTEXM3_AXI_0.vds
+# Journal file: G:/My Drive/College/alexnet-ai-accelerator/vivado_systolic/vivado_systolic.runs/CORTEXM3_AXI_0_synth_1\vivado.jou
+# Running On        :AbhinavXPS15
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700H
+# CPU Frequency     :2918 MHz
+# CPU Physical cores:14
+# CPU Logical cores :20
+# Host memory       :68374 MB
+# Swap memory       :4294 MB
+# Total Virtual     :72669 MB
+# Available Virtual :37705 MB
+#-----------------------------------------------------------
+source CORTEXM3_AXI_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'g:/My Drive/College/alexnet-ai-accelerator/AT426-r0p1-00rel0-1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is g:/My Drive/College/alexnet-ai-accelerator/vivado_systolic/vivado_systolic.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: CORTEXM3_AXI_0
+Command: synth_design -top CORTEXM3_AXI_0 -part xc7vx485tffg1157-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+WARNING: [Common 17-348] Failed to get the license for feature 'Synthesis' and/or device 'xc7vx485t'. Explanation: The license feature Synthesis could not be found.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". 
+4 Infos, 2 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-345] A valid license was not found for feature 'Synthesis' and/or device 'xc7vx485t'. Please run the Vivado License Manager for assistance in determining
+which features and devices are licensed for your system.
+Resolution: Check the status of your licenses in the Vivado License Manager. For debug help search Xilinx Support for "Licensing FAQ". If you are using a license server, verify that the license server is up and running a version of the xilinx daemon that is compatible with the version of Xilinx software that you are using. Note: Vivado 2021.1 and later versions require upgrading your license server tools to the Flex 11.17.2.0 versions. Please confirm with your license admin that the correct version of the license server tools are installed.
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 22:12:44 2024...

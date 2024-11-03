@@ -12,7 +12,7 @@ module fifo_inject #(
     input logic load,
     input logic read_en,
     input logic [15:0] data_in [0:31],  // Parallel load input for the row or column
-    output logic [15:0] data_out        // Output for systolic array
+    output logic [15:0] data_out,        // Output for systolic array
     output logic complete_flag                     // Flag to indicate when 64 cycles are complete
 );
 
@@ -21,10 +21,10 @@ module fifo_inject #(
 
     // Initialization of FIFO contents and read pointer on reset or load
     always_ff @(posedge clk or negedge rst_n)
-        if (!rst_n)
+        if (!rst_n) begin
             read_ptr <= 0;
             complete_flag <= 0;
-        else if (load) 
+        end else if (load) 
             for (int i = 0; i < 64; i++) 
                 fifo[i] <= (i < ZERO_DELAY) ? 0 : data_in[i - ZERO_DELAY]; // Fill with zeros, then data
         else if (read_en) begin

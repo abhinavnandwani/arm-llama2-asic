@@ -1,0 +1,8 @@
+sv xil_defaultlib --include "../../../vivado_systolic.gen/sources_1/ip/CORTEXM3_AXI_0/rtl" \
+"../../../../hardware/systolic_array_rtl/fifo_inject.sv" \
+"../../../../hardware/systolic_array_rtl/systolic_control.sv" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

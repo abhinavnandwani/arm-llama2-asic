@@ -48,8 +48,13 @@ module systolic_mult(clk,rst_n,A_west,B_north,sum_out);
                     .east_row_out(east_row_out[i][j]), 
                     .south_col_out(south_col_out[i][j]),
                     .sum_in(sum[i][j]),
-                    .sum_out(next_sum[i][j])
+                    .sum_out(next_sum[i][j]),
                     .complete_flag(complete_flag[i][j])
                 );
             end
         end
+    endgenerate
+    
+
+
+endmodule
