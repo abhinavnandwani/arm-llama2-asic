@@ -36,20 +36,6 @@ Python scripts for pre-processing model weights and converting them to a quantiz
 3. **Quantized LLaMA 2 Model**: A scaled-down, quantized 50M parameter LLaMA 2 model, adapted to utilize INT8 precision. This allows the model to run on low-power FPGA-based systems.
 4. **Vivado Deployment**: All code is compatible with Vivado for easy FPGA synthesis and deployment.
 
-## Usage
-
-1. **Hardware Synthesis**:
-   - Synthesize the SystemVerilog files in `/hardware/` using Vivado to deploy the systolic array and ARM Cortex-M3 on your FPGA platform.
-
-2. **Driver Integration**:
-   - Compile the code in `/software/` with the appropriate ARM toolchain to control and interact with the systolic array.
-   - `driver.c` provides functions to load matrices, trigger computations, and retrieve results.
-
-3. **Pre-process and Quantize Model Weights**:
-   - Use the scripts in `/scripts/` to quantize model weights and format input data for INT8 compatibility.
-
-4. **Run Inference**:
-   - Load the quantized weights and use `run.c` to perform inference, leveraging the systolic array for matrix multiplications.
 
 ## License
 
