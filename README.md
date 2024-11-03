@@ -7,25 +7,55 @@ All synthesizable code is written in **SystemVerilog**.
 ## Architecture
 ![Architecture](architecture.png)
 
-## Components
-- **Systolic Array**: A 32x32 matrix multiplication unit for INT8 operations, capable of executing 1024 MAC operations per cycle.
-- **Processing Element (PE)**: Each PE performs Multiply-Accumulate operations, managing inputs from the west (row) and north (column) sides.
-- **FIFO Injectors**: FIFO modules load input data into the systolic array, with configurable zero delays for synchronization.
-- **Control Module**: Orchestrates the data flow, managing states for loading, reading, and multiplying data.
+# ARM Cortex-M3 LLaMA 2 on Systolic Array Accelerator
 
-## Operation
-1. **Data Injection**: Matrices A and B are loaded into FIFOs. Data is injected in a staggered manner.
-2. **Multiplication**: The systolic array performs matrix multiplication once data is loaded.
-3. **Output**: A 32x32 matrix of multiplication results is generated.
+This repository contains the code and hardware description files to implement a scaled-down 50 million-parameter variant of the LLaMA 2 model on an ARM Cortex-M3 soft core. Using a custom systolic array for efficient matrix multiplication, the project allows for LLaMA 2 inference on resource-constrained hardware such as FPGA, with Vivado as the deployment tool.
+
+## Repository Structure
+
+### `/hardware/`
+Contains HDL (SystemVerilog) files that define the systolic array and its supporting modules:
+- **`pe.sv`**: Defines a single processing element (PE) within the systolic array, which performs an INT8 multiply-accumulate (MAC) operation.
+- **`systolic_mult.sv`**: Defines the full systolic array as a 32x32 matrix multiplier for INT8 operations, with each PE performing a MAC operation.
+- **`fifo_inject.sv`**: Implements FIFO buffers to inject data into the systolic array in a staggered, pipelined fashion, ensuring data availability for each PE and improving throughput.
+- **`systolic_control.sv`**: Manages the control logic for matrix data flow into the systolic array, coordinating data injection and handling completion flags.
+
+### `/software/`
+Contains driver and inference code for the ARM Cortex-M3 to control the systolic array and perform LLaMA 2 inference:
+- **`driver.c`**: Driver code to interface with the systolic array. It manages matrix loading, triggering computations, and retrieving results.
+- **`run.c`**: High-level inference code inspired by [karpathy/llama2.c](https://github.com/karpathy/llama2.c). This file includes a scaled-down LLaMA 2 model and offloads matrix multiplication tasks to the systolic array driver.
+- **`utils.c`**: Utility functions for quantization, dequantization, and data preparation, ensuring model weights and input data are correctly formatted for INT8 operations.
+
+### `/scripts/`
+Python scripts for pre-processing model weights and converting them to a quantized format suitable for loading onto the FPGA.
+
+## Key Features
+
+1. **Custom Systolic Array Accelerator**: A 32x32 systolic array optimized for high-speed INT8 matrix multiplication, allowing high-throughput and low-power inference crucial for LLaMA 2 computations.
+2. **ARM Cortex-M3 Integration**: Driver code for the ARM Cortex-M3 soft core to manage the systolic array, handle data flow, trigger computations, and retrieve results, enabling efficient control and minimal CPU overhead.
+3. **Quantized LLaMA 2 Model**: A scaled-down, quantized 50M parameter LLaMA 2 model, adapted to utilize INT8 precision. This allows the model to run on low-power FPGA-based systems.
+4. **Vivado Deployment**: All code is compatible with Vivado for easy FPGA synthesis and deployment.
 
 ## Usage
-- Load matrices A and B into the FIFO injectors.
-- Start the multiplication process.
-- Retrieve the output from the systolic array.
 
-## Requirements
-- SystemVerilog synthesis toolchain
-- Hardware simulation environment (e.g., ModelSim, VCS)
+1. **Hardware Synthesis**:
+   - Synthesize the SystemVerilog files in `/hardware/` using Vivado to deploy the systolic array and ARM Cortex-M3 on your FPGA platform.
+
+2. **Driver Integration**:
+   - Compile the code in `/software/` with the appropriate ARM toolchain to control and interact with the systolic array.
+   - `driver.c` provides functions to load matrices, trigger computations, and retrieve results.
+
+3. **Pre-process and Quantize Model Weights**:
+   - Use the scripts in `/scripts/` to quantize model weights and format input data for INT8 compatibility.
+
+4. **Run Inference**:
+   - Load the quantized weights and use `run.c` to perform inference, leveraging the systolic array for matrix multiplications.
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+Inspired by [karpathy/llama2.c](https://github.com/karpathy/llama2.c).
+
