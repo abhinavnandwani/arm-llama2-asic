@@ -7,6 +7,10 @@ All synthesizable code is written in **SystemVerilog**.
 ## Architecture
 ![Architecture](architecture.png)
 
+## Vivado Schematic 
+![Schematic](block_diagram.png)
+
+
 
 ## Repository Structure
 
