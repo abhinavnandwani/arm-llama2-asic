@@ -1,9 +1,33 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.3.1 Safari/605.1.15" version="27.1.6">
   <diagram name="Page-1" id="01L0ovd0Y24A6iHlY-x_">
-    <mxGraphModel>
+    <mxGraphModel dx="691" dy="426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="y6oyUbaogkaG43_ETInO-1" value="PL" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="70" width="350" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-2" value="Systolic Array" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="y6oyUbaogkaG43_ETInO-1">
+          <mxGeometry x="230" y="42.5" width="105" height="97.5" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-3" value="Control Logic" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="y6oyUbaogkaG43_ETInO-1">
+          <mxGeometry x="20" y="95" width="97.5" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-5" value="BRAM" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="y6oyUbaogkaG43_ETInO-1">
+          <mxGeometry x="237.5" y="160" width="97.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-15" value="AXI-4 Lite" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="y6oyUbaogkaG43_ETInO-1">
+          <mxGeometry x="43.75" y="40" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-12" value="Embedding" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-13" value="Decoder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y6oyUbaogkaG43_ETInO-14" value="LM Head" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="560" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
